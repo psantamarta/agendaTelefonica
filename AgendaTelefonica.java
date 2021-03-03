@@ -39,8 +39,8 @@ public class AgendaTelefonica{
      * en la agenda uno en cada linea
      */
     public void printAllNamesOneMultiline(){
-        for (Map.Entry<String, String> entry : agenda.entrySet()) {
-            System.out.println(entry.getKey() + " - " + entry.getValue());
+        for(String clave : agenda.keySet()){
+            System.out.println(clave + " - " + agenda.get(clave)); 
         }
     }
 }
