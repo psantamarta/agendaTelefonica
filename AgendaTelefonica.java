@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class AgendaTelefonica{
 
@@ -23,5 +24,23 @@ public class AgendaTelefonica{
     public String lookupNumber(String name){
         String numAsociado = agenda.get(name);
         return numAsociado;
+    }
+
+    /**
+     * Imprime todos los nombres de los contactos registrados
+     * en la agenda
+     */
+    public void printAllNames(){
+        agenda.forEach((k,v) -> System.out.println( k + " - " + v));
+    }
+
+    /**
+     * Imprime todos los nombres de los contactos registrados
+     * en la agenda uno en cada linea
+     */
+    public void printAllNamesOneMultiline(){
+        for (Map.Entry<String, String> entry : agenda.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue());
+        }
     }
 }
